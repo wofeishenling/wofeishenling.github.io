@@ -81,14 +81,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="name">
-<meta property="og:url" content="http://yoursite.com/name/index.html">
+<meta name="description" content="12345678910111213141516171819const int MAX = 10010;int father[MAX], root[MAX];int findFather(int x)//递归写法简洁高效&amp;#123;	if (father[x] == x) return x;	return father[x]=findFather(father[x]);&amp;#125;void Unio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="并查集操作">
+<meta property="og:url" content="http://yoursite.com/2019/01/28/并查集/index.html">
 <meta property="og:site_name" content="晚来天欲雪 能饮一杯无">
+<meta property="og:description" content="12345678910111213141516171819const int MAX = 10010;int father[MAX], root[MAX];int findFather(int x)//递归写法简洁高效&amp;#123;	if (father[x] == x) return x;	return father[x]=findFather(father[x]);&amp;#125;void Unio">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-28T13:45:52.675Z">
+<meta property="og:updated_time" content="2019-01-29T02:52:32.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="name">
+<meta name="twitter:title" content="并查集操作">
+<meta name="twitter:description" content="12345678910111213141516171819const int MAX = 10010;int father[MAX], root[MAX];int findFather(int x)//递归写法简洁高效&amp;#123;	if (father[x] == x) return x;	return father[x]=findFather(father[x]);&amp;#125;void Unio">
 
 
 
@@ -118,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/name/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/28/并查集/">
 
 
 
 
 
-  <title>name | 晚来天欲雪 能饮一杯无</title>
+  <title>并查集操作 | 晚来天欲雪 能饮一杯无</title>
   
 
 
@@ -249,33 +252,194 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/28/并查集/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wofeishenling">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/bg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="晚来天欲雪 能饮一杯无">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">name</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">并查集操作</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-28T15:55:03+08:00">
+                2019-01-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX = <span class="number">10010</span>;</span><br><span class="line"><span class="keyword">int</span> father[MAX], root[MAX];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findFather</span><span class="params">(<span class="keyword">int</span> x)</span><span class="comment">//递归写法简洁高效</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (father[x] == x) <span class="keyword">return</span> x;</span><br><span class="line">	<span class="keyword">return</span> father[x]=findFather(father[x]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Union</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> faA = findFather(a);</span><br><span class="line">	<span class="keyword">int</span> faB = findFather(b);</span><br><span class="line">	<span class="keyword">if</span> (faA != faB) father[faA] = faB;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; MAX; i++) &#123;</span><br><span class="line">		father[i] = i;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/28/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/28/1118-Birds-in-Forest-（25-分）/" rel="prev" title="1118 Birds in Forest （25 分）">
+                1118 Birds in Forest （25 分） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
