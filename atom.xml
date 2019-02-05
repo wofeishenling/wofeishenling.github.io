@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-05T08:21:41.019Z</updated>
+  <updated>2019-02-05T13:05:46.642Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,123 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1008 Elevator （20 分）</title>
+    <link href="http://yoursite.com/2019/02/05/1008-Elevator-%EF%BC%8820-%E5%88%86%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/02/05/1008-Elevator-（20-分）/</id>
+    <published>2019-02-05T13:04:35.000Z</published>
+    <updated>2019-02-05T13:05:46.642Z</updated>
+    
+    <content type="html"><![CDATA[<p>emmm……阅读题<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span>, N, level = <span class="number">0</span>, input;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;N);</span><br><span class="line">sum += N * <span class="number">5</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;input);</span><br><span class="line"><span class="keyword">if</span> (input &gt; level)</span><br><span class="line">sum += (input - level) * <span class="number">6</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">sum += (level - input) * <span class="number">4</span>;</span><br><span class="line">level = input;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, sum);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;emmm……阅读题&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="PAT A" scheme="http://yoursite.com/categories/PAT-A/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1007 Maximum Subsequence Sum （25 分）</title>
+    <link href="http://yoursite.com/2019/02/05/1007-Maximum-Subsequence-Sum-%EF%BC%8825-%E5%88%86%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/02/05/1007-Maximum-Subsequence-Sum-（25-分）/</id>
+    <published>2019-02-05T12:56:27.000Z</published>
+    <updated>2019-02-05T12:58:07.868Z</updated>
+    
+    <content type="html"><![CDATA[<p>动态规划：最大连续子序列和<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX = <span class="number">10010</span>;</span><br><span class="line"><span class="keyword">int</span> input[MAX], dp[MAX],s[MAX];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;input[i]);</span><br><span class="line">&#125;</span><br><span class="line">dp[<span class="number">0</span>] = input[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span> (dp[i - <span class="number">1</span>] + input[i] &gt; input[i])</span><br><span class="line">&#123;</span><br><span class="line">dp[i] = dp[i - <span class="number">1</span>] + input[i];</span><br><span class="line">s[i] = s[i - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">dp[i] = input[i];</span><br><span class="line">s[i] = i;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span> (dp[i] &gt; dp[k])</span><br><span class="line">&#123;</span><br><span class="line">k = i;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (dp[k] &lt; <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">"0 %d %d"</span>, input[<span class="number">0</span>], input[n - <span class="number">1</span>]);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d %d %d"</span>, dp[k], input[s[k]], input[k]);</span><br><span class="line">system(<span class="string">"pause"</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;动态规划：最大连续子序列和&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/sp
+      
+    
+    </summary>
+    
+      <category term="PAT A" scheme="http://yoursite.com/categories/PAT-A/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1006 Sign In and Sign Out （25 分）</title>
+    <link href="http://yoursite.com/2019/02/05/1006-Sign-In-and-Sign-Out-%EF%BC%8825-%E5%88%86%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/02/05/1006-Sign-In-and-Sign-Out-（25-分）/</id>
+    <published>2019-02-05T11:53:40.000Z</published>
+    <updated>2019-02-05T11:55:52.273Z</updated>
+    
+    <content type="html"><![CDATA[<p>简单的字符串sort<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="built_in">string</span> ID;</span><br><span class="line"><span class="built_in">string</span> signin;</span><br><span class="line"><span class="built_in">string</span> signout;</span><br><span class="line">student(<span class="built_in">string</span> s1, <span class="built_in">string</span> s2, <span class="built_in">string</span> s3) :ID(s1), signin(s2), signout(s3) &#123;&#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"><span class="built_in">string</span> ID, signin, signout;</span><br><span class="line"><span class="built_in">vector</span>&lt;student&gt; input;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; ID &gt;&gt; signin &gt;&gt; signout;</span><br><span class="line"><span class="function">student <span class="title">tmp</span><span class="params">(ID, signin, signout)</span></span>;</span><br><span class="line">input.push_back(tmp);</span><br><span class="line">&#125;</span><br><span class="line">sort(input.begin(), input.end(), [](<span class="keyword">auto</span>&amp; a, <span class="keyword">auto</span>&amp; b)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">return</span> a.signin &lt; b.signin;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; input[<span class="number">0</span>].ID &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">sort(input.begin(), input.end(), [](<span class="keyword">auto</span>&amp; a, <span class="keyword">auto</span>&amp; b)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">return</span> a.signout &gt; b.signout;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; input[<span class="number">0</span>].ID;</span><br><span class="line">system(<span class="string">"pause"</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;简单的字符串sort&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;
+      
+    
+    </summary>
+    
+      <category term="PAT A" scheme="http://yoursite.com/categories/PAT-A/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1005 Spell It Right （20 分）</title>
+    <link href="http://yoursite.com/2019/02/05/1005-Spell-It-Right-%EF%BC%8820-%E5%88%86%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/02/05/1005-Spell-It-Right-（20-分）/</id>
+    <published>2019-02-05T11:39:51.000Z</published>
+    <updated>2019-02-05T11:45:08.939Z</updated>
+    
+    <content type="html"><![CDATA[<p>简单的字符串处理<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">map</span>&lt;<span class="keyword">char</span>, <span class="built_in">string</span>&gt; int2string = &#123;</span><br><span class="line">&#123; <span class="string">'0'</span>,<span class="string">"zero"</span> &#125;,&#123; <span class="string">'1'</span>,<span class="string">"one"</span> &#125;,&#123; <span class="string">'2'</span>,<span class="string">"two"</span> &#125;,&#123; <span class="string">'3'</span>,<span class="string">"three"</span> &#125;,&#123; <span class="string">'4'</span>,<span class="string">"four"</span> &#125;,</span><br><span class="line">&#123; <span class="string">'5'</span>,<span class="string">"five"</span> &#125;,&#123; <span class="string">'6'</span>,<span class="string">"six"</span> &#125;,&#123; <span class="string">'7'</span>,<span class="string">"seven"</span> &#125;,&#123; <span class="string">'8'</span>,<span class="string">"eight"</span> &#125;,&#123; <span class="string">'9'</span>,<span class="string">"nine"</span> &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">string</span> input;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; input;</span><br><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; input.size(); i++)</span><br><span class="line">&#123;</span><br><span class="line">sum += (input[i] - <span class="string">'0'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">char</span> csum[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">sprintf</span>(csum, <span class="string">"%d"</span>, sum);</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">ssum</span><span class="params">(csum)</span></span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ssum.size(); i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; int2string[ssum[i]];</span><br><span class="line"><span class="keyword">if</span> (i &lt; ssum.size() - <span class="number">1</span>) <span class="built_in">cout</span> &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">&#125;</span><br><span class="line">system(<span class="string">"pause"</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;简单的字符串处理&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;b
+      
+    
+    </summary>
+    
+      <category term="PAT A" scheme="http://yoursite.com/categories/PAT-A/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>字符串数值互转</title>
+    <link href="http://yoursite.com/2019/02/05/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E5%80%BC%E4%BA%92%E8%BD%AC/"/>
+    <id>http://yoursite.com/2019/02/05/字符串数值互转/</id>
+    <published>2019-02-05T11:32:11.000Z</published>
+    <updated>2019-02-05T11:43:27.004Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>字符串和整型的转换非常常见，在c++中，利用sscanf和sprintf函数是较为方便快捷的选择。</strong></p><p>sprintf(char<em> Buffer,const char</em> Format,…)</p><p>sscanf(char<em> Buffer,const char</em> Format,&amp;…)<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">stirng2int：</span><br><span class="line">    <span class="built_in">string</span> input；</span><br><span class="line">    <span class="keyword">int</span> output;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;input;</span><br><span class="line">    <span class="built_in">sscanf</span>(input.c_str(),<span class="string">"%d"</span>,&amp;output);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; output;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line">int2string:</span><br><span class="line">    <span class="keyword">int</span> input;</span><br><span class="line">    <span class="keyword">char</span> temp[buffersize];</span><br><span class="line">    <span class="built_in">sprintf</span>(temp,<span class="string">"%d"</span>,input);</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">output</span><span class="params">(temp)</span></span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; output;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;字符串和整型的转换非常常见，在c++中，利用sscanf和sprintf函数是较为方便快捷的选择。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;sprintf(char&lt;em&gt; Buffer,const char&lt;/em&gt; Format,…)&lt;/p&gt;
+&lt;p&gt;sscanf
+      
+    
+    </summary>
+    
+      <category term="基本操作" scheme="http://yoursite.com/categories/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>1004 Counting Leaves （30 分）</title>
