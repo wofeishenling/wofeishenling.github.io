@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="12345678910111213141516171819202122TreeNode* invertTree(TreeNode* root) &amp;#123;        if (!root) return NULL;        TreeNode *tmp = root-&amp;gt;left;        root-&amp;gt;left = invertTree(root-&amp;gt;right);">
+<meta name="description" content="翻转二叉树 1234567TreeNode* invertTree(TreeNode* root) &amp;#123;        if (!root) return NULL;        TreeNode *tmp = root-&amp;gt;left;        root-&amp;gt;left = invertTree(root-&amp;gt;right);        root-&amp;gt;right =">
 <meta property="og:type" content="article">
 <meta property="og:title" content="翻转二叉树">
 <meta property="og:url" content="http://yoursite.com/2019/03/01/翻转二叉树/index.html">
 <meta property="og:site_name" content="晚来天欲雪 能饮一杯无">
-<meta property="og:description" content="12345678910111213141516171819202122TreeNode* invertTree(TreeNode* root) &amp;#123;        if (!root) return NULL;        TreeNode *tmp = root-&amp;gt;left;        root-&amp;gt;left = invertTree(root-&amp;gt;right);">
+<meta property="og:description" content="翻转二叉树 1234567TreeNode* invertTree(TreeNode* root) &amp;#123;        if (!root) return NULL;        TreeNode *tmp = root-&amp;gt;left;        root-&amp;gt;left = invertTree(root-&amp;gt;right);        root-&amp;gt;right =">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-01T14:01:21.090Z">
+<meta property="og:updated_time" content="2019-03-03T01:04:18.296Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="翻转二叉树">
-<meta name="twitter:description" content="12345678910111213141516171819202122TreeNode* invertTree(TreeNode* root) &amp;#123;        if (!root) return NULL;        TreeNode *tmp = root-&amp;gt;left;        root-&amp;gt;left = invertTree(root-&amp;gt;right);">
+<meta name="twitter:description" content="翻转二叉树 1234567TreeNode* invertTree(TreeNode* root) &amp;#123;        if (!root) return NULL;        TreeNode *tmp = root-&amp;gt;left;        root-&amp;gt;left = invertTree(root-&amp;gt;right);        root-&amp;gt;right =">
 
 
 
@@ -352,7 +352,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  95 words
+                  99 words
                 </span>
               
 
@@ -389,7 +389,10 @@
       
 
       
-        <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">TreeNode* <span class="title">invertTree</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!root) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        TreeNode *tmp = root-&gt;left;</span><br><span class="line">        root-&gt;left = invertTree(root-&gt;right);</span><br><span class="line">        root-&gt;right = invertTree(tmp);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">TreeNode* <span class="title">invertTree</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!root) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        <span class="built_in">queue</span>&lt;TreeNode*&gt; q;</span><br><span class="line">        q.push(root);</span><br><span class="line">        <span class="keyword">while</span> (!q.empty()) &#123;</span><br><span class="line">            TreeNode *node = q.front(); q.pop();</span><br><span class="line">            TreeNode *tmp = node-&gt;left;</span><br><span class="line">            node-&gt;left = node-&gt;right;</span><br><span class="line">            node-&gt;right = tmp;</span><br><span class="line">            <span class="keyword">if</span> (node-&gt;left) q.push(node-&gt;left);</span><br><span class="line">            <span class="keyword">if</span> (node-&gt;right) q.push(node-&gt;right);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>翻转二叉树</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">TreeNode* <span class="title">invertTree</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!root) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        TreeNode *tmp = root-&gt;left;</span><br><span class="line">        root-&gt;left = invertTree(root-&gt;right);</span><br><span class="line">        root-&gt;right = invertTree(tmp);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">TreeNode* <span class="title">invertTree</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!root) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        <span class="built_in">queue</span>&lt;TreeNode*&gt; q;</span><br><span class="line">        q.push(root);</span><br><span class="line">        <span class="keyword">while</span> (!q.empty()) &#123;</span><br><span class="line">            TreeNode *node = q.front(); q.pop();</span><br><span class="line">            TreeNode *tmp = node-&gt;left;</span><br><span class="line">            node-&gt;left = node-&gt;right;</span><br><span class="line">            node-&gt;right = tmp;</span><br><span class="line">            <span class="keyword">if</span> (node-&gt;left) q.push(node-&gt;left);</span><br><span class="line">            <span class="keyword">if</span> (node-&gt;right) q.push(node-&gt;right);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
